@@ -1,0 +1,25 @@
+version: '3'
+services:
+  xray-proxy:
+    container_name: xray-proxy
+    build: .
+    image: xray-proxy:latest
+    restart: always
+    networks:
+      - default
+    ports:
+      - "443:443"
+    volumes:
+      - ./config:/usr/local/etc/xray
+      - ./logs:/xray/logs
+      - ./scripts:/xray/scripts
+      - ./ssl:/xray/ssl
+    deploy:
+      resources:
+        limits:
+          cpus: '0.4'
+          memory: '400M'
+
+networks:
+  default:
+    driver: bridge

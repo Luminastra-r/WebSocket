@@ -1,0 +1,7 @@
+# Keep runtime secrets out of the image build context
+config/config.json
+logs/
+ssl/
+scripts/reality_keys.txt
+.trae/
+.git/

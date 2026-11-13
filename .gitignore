@@ -1,0 +1,14 @@
+# Local secrets and runtime data
+config/config.json
+logs/
+ssl/
+scripts/reality_keys.txt
+*.yaml
+*.yml
+!docker-compose.yml
+.trae/
+# Legacy local certificate and rule files
+scripts/certbot.sh
+scripts/renew_cert.sh
+scripts/crontab.txt
+sub/
